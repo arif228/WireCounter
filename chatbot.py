@@ -24,7 +24,7 @@ def default_command(message):
     image_bit = Image.open(io.BytesIO(file_bytes))                                    # Открываем изображение из байтового потока
     image = np.array(image_bit)                                                      # Преобразуем изображение в массив NumPy
     image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)                                   # Преобразуем цветовое пространство из BGR в RGB (PIL по умолчанию использует RGB, а OpenCV BGR)
-    bot.send_message(message.chat.id, "УФ")
+    bot.send_message(message.chat.id, "Принял")
 
 bot.infinity_polling()
 
